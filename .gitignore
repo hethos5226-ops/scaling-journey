@@ -1,0 +1,32 @@
+# ---- Secrets -----------------------------------------------------------
+# Real configuration values (API keys, client IDs, bundle identifiers for
+# signing) live here and must never be committed. See Config/Secrets.example.xcconfig
+Config/Secrets.xcconfig
+*.p8
+*.p12
+*.mobileprovision
+GoogleService-Info.plist
+.env
+.env.*
+!.env.example
+
+# ---- Xcode -------------------------------------------------------------
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ---- Swift Package Manager --------------------------------------------
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# ---- macOS -------------------------------------------------------------
+.DS_Store

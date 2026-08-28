@@ -1,0 +1,33 @@
+// Base.xcconfig
+//
+// Shared, non-secret build settings for every configuration.
+//
+// Anything sensitive (signing team, real bundle identifier, OAuth client IDs,
+// backend URLs) belongs in Config/Secrets.xcconfig, which is gitignored.
+// Copy Config/Secrets.example.xcconfig to Config/Secrets.xcconfig to get started.
+
+// Optional include: the build still succeeds when the file is absent, so a
+// fresh clone compiles and runs with the local-only defaults below.
+#include? "Secrets.xcconfig"
+
+// ---- Identity ----------------------------------------------------------
+APP_DISPLAY_NAME = Scaling Journey
+APP_BUNDLE_IDENTIFIER_BASE = com.scalingjourney
+MARKETING_VERSION = 0.1.0
+CURRENT_PROJECT_VERSION = 1
+
+// ---- Deployment --------------------------------------------------------
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+TARGETED_DEVICE_FAMILY = 1
+SWIFT_VERSION = 5.0
+
+// ---- Signing -----------------------------------------------------------
+// DEVELOPMENT_TEAM is intentionally empty here. Set it in Secrets.xcconfig or
+// let Xcode manage it in the Signing & Capabilities tab.
+CODE_SIGN_STYLE = Automatic
+
+// ---- Backend -----------------------------------------------------------
+// Empty means "no backend configured": the app runs fully local and the
+// authentication layer falls back to a device-local account.
+SJ_API_BASE_URL =
+SJ_GOOGLE_CLIENT_ID =
